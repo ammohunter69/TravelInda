@@ -8,8 +8,14 @@ import InputLabel from "@material-ui/core/InputLabel";
 import MenuItem from "@material-ui/core/MenuItem";
 import FormControl from "@material-ui/core/FormControl";
 import Select from "@material-ui/core/Select";
-import { makeStyles, CircularProgress } from "@material-ui/core";
+import {
+  makeStyles,
+  CircularProgress,
+  Button,
+  Typography,
+} from "@material-ui/core";
 import MuiAlert from "@material-ui/lab/Alert";
+// import { Link } from "react-router-dom";
 import ImageCard from "./ImageCard";
 import categoryData from "../category/categoryData";
 // import useWindowPosition from "../hook/useWindowPosition";
@@ -25,13 +31,21 @@ const useStyles = makeStyles((theme) => ({
       flexDirection: "column",
     },
   },
-  formControl: {
-    margin: theme.spacing(1),
-    minWidth: 120,
-    marginTop: "5rem",
-    background: "white",
+  control: {
+    display: "flex",
+    justifyContent: "space-between",
     padding: "1px",
+    color: "transparent",
+  },
+  formControl: {
+    minWidth: 120,
+    // fontcolor: "white",
+    background: "#83c5be",
     borderRadius: "3px",
+    marginTop: "5rem",
+  },
+  buttonControl: {
+    marginTop: "5rem",
   },
   selectEmpty: {
     marginTop: theme.spacing(2),
@@ -84,14 +98,27 @@ const Places = ({ match }) => {
 
   return (
     <>
-      <div>
+      <div className={classes.control}>
+        <Link
+          to={`/states`}
+          style={{ color: "inherit", textDecoration: "inherit" }}
+        >
+          <Button
+            size="large"
+            variant="contained"
+            color="primary"
+            className={classes.buttonControl}
+          >
+            Go back
+          </Button>
+        </Link>
         <FormControl variant="filled" className={classes.formControl}>
           <InputLabel id="demo-simple-select-outlined-label">
-            category
+            Category
           </InputLabel>
           <Select value={category} onChange={handleChange} label="category">
             <MenuItem value="">
-              <em>None</em>
+              <em>All</em>
             </MenuItem>
             {categoryData.map((data, i) => {
               return (
@@ -112,7 +139,11 @@ const Places = ({ match }) => {
           <MuiAlert severity="error">{error}!</MuiAlert>
         ) : (
           <div className={classes.root} id="places">
-            {
+            {filteredPlaces.length === 0 ? (
+              <Typography gutterBottom variant="h5" style={{ color: "white" }}>
+                No data found. Please try another category.
+              </Typography>
+            ) : (
               // states.places.map((place) => (
               filteredPlaces.map((place) => (
                 <ImageCard
@@ -123,7 +154,7 @@ const Places = ({ match }) => {
                   stateId={states._id}
                 />
               ))
-            }
+            )}
           </div>
         )}
       </div>

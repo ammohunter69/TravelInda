@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { listStateDetails } from "../redux/stateActions";
-import { makeStyles, CircularProgress } from "@material-ui/core";
+import { makeStyles, CircularProgress, Button } from "@material-ui/core";
 import MuiAlert from "@material-ui/lab/Alert";
 import FinalImageCard from "./FinalImageCard";
 
@@ -18,6 +18,12 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("md")]: {
       flexDirection: "column",
     },
+  },
+  flowcontrol: {
+    // backgroundColor: "white",
+    // fontcolor: "black",
+    margin: theme.spacing(1),
+    marginTop: "5rem",
   },
 }));
 
@@ -44,9 +50,25 @@ const PlaceDetails = ({ match }) => {
 
   const place_id = match.params.place_id;
   const { loading, error, states } = stateDetials;
+  const stateId = match.params.id;
 
   return (
     <>
+      <div>
+        <Link
+          to={`/states/${stateId}/places`}
+          style={{ color: "inherit", textDecoration: "inherit" }}
+        >
+          <Button
+            size="large"
+            variant="contained"
+            color="primary"
+            className={classes.flowcontrol}
+          >
+            Go back
+          </Button>
+        </Link>
+      </div>
       <div className={classes.root}>
         <div>
           {loading ? (

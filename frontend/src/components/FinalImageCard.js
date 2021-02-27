@@ -9,7 +9,7 @@ import { Collapse } from "@material-ui/core";
 
 const useStyles = makeStyles({
   root: {
-    marginTop: "7rem",
+    // marginTop: "7rem",
     maxWidth: "98%",
     maxHeight: "98%",
     background: "rgba(0,0,0,0.5)",

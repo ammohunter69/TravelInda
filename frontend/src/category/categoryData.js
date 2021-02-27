@@ -1,11 +1,13 @@
 const categoryData = [
-  "Sea",
+  "Beach",
   "Temple",
-  "Forrest",
+  "Forest",
   "Hill",
   "Valley",
   "Mountain",
   "Historical",
+  "Desert",
+  "City",
 ];
 
 export default categoryData;

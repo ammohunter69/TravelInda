@@ -74,16 +74,16 @@ export default function Header() {
   return (
     <div className={classes.root} id="header">
       <AppBar className={classes.appbar} elevation={10}>
-        <Toolbar className={classes.appbarWrapper}>
-          <h1 className={classes.appbarTitle}>
-            <Link
-              to={`/`}
-              style={{ color: "inherit", textDecoration: "inherit" }}
-            >
-              <span className={classes.colorText}>Travel India.</span>
-            </Link>
-          </h1>
-        </Toolbar>
+        {/* <Toolbar className={classes.appbarWrapper}> */}
+        <h1 className={classes.appbarTitle}>
+          <Link
+            to={`/`}
+            style={{ color: "inherit", textDecoration: "inherit" }}
+          >
+            <span className={classes.colorText}>Travel India</span>
+          </Link>
+        </h1>
+        {/* </Toolbar> */}
       </AppBar>
     </div>
   );
