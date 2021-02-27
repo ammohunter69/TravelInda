@@ -33,7 +33,7 @@ export const listStateDetails = (id) => async (dispatch) => {
     // const { data } = await axios.get("/api/states");
     const { data } = await axios.get(`/api/states/${id}`);
     // console.log(`the data is ${JSON.stringify(data)}`);
-    console.log(`the data is ${data1.places}`);
+    // console.log(`the data is ${data1.places}`);
     // const data = data1;
 
     dispatch({ type: STATE_DETAILS_SUCCESS, payload: data });
