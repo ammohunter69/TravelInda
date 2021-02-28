@@ -75,7 +75,7 @@ const states = [
         name: "Kovalam",
         description:
           "the beach town located by the beautiful Arabian sea can be found situated within the boundaries of Thiruvananthapuram city of Kerala. There is much incredible beauty that lies within this city.",
-        category: "beach",
+        category: "Beach",
         entryfee: "NA",
         timing: "NA",
         image: "/assets/kovalum.png",
@@ -84,7 +84,7 @@ const states = [
         name: "Varkala",
         description:
           "Varkala is a small city that lies within the “God’s own Country” and its high, red cliffs make it a unique place to visit. This city is situated in the northern suburbs and is a major tourism and commercial centre in the municipality of Thiruvananthapuram. ",
-        category: "beach",
+        category: "Beach",
         entryfee: "NA",
         timing: "NA",
         image: "/assets/varkala.png",
@@ -130,7 +130,7 @@ const states = [
         name: "MYSORE",
         description:
           "Mysore is one of the most famous tourist destinations of South India. Originally known as Mysuru, it is the largest districts of Karnataka.",
-        category: "beach",
+        category: "Historical",
         entryfee: "NA",
         timing: "NA",
         image: "/assets/mysore.png",
@@ -148,7 +148,7 @@ const states = [
         name: "Udupi",
         description:
           "Udupi is a wonderful holiday destination in Karnataka located about 60 km away from Mangalore. One of the unique things about this city is that it is surrounded by the Western ghats on one side and the Arabian Sea on the other.",
-        category: "beach",
+        category: "Beach",
         entryfee: "NA",
         timing: "NA",
         image: "/assets/udupi.png",

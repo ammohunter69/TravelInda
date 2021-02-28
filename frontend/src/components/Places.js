@@ -33,6 +33,8 @@ const useStyles = makeStyles((theme) => ({
   },
   control: {
     display: "flex",
+    // position: "fixed",
+    // flexGrow: 1,
     justifyContent: "space-between",
     padding: "1px",
     color: "transparent",
